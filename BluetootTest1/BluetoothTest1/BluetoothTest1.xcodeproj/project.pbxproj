@@ -14,6 +14,8 @@
 		F686143C22823E0900DF3A32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F686143A22823E0900DF3A32 /* LaunchScreen.storyboard */; };
 		F686144722823E0900DF3A32 /* BluetoothTest1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686144622823E0900DF3A32 /* BluetoothTest1Tests.swift */; };
 		F686145222823E0900DF3A32 /* BluetoothTest1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686145122823E0900DF3A32 /* BluetoothTest1UITests.swift */; };
+		F686146122823E8000DF3A32 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686146022823E8000DF3A32 /* Utils.swift */; };
+		F68614642282429000DF3A32 /* BLEAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68614632282429000DF3A32 /* BLEAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		F686144D22823E0900DF3A32 /* BluetoothTest1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothTest1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F686145122823E0900DF3A32 /* BluetoothTest1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothTest1UITests.swift; sourceTree = "<group>"; };
 		F686145322823E0900DF3A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F686146022823E8000DF3A32 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F68614632282429000DF3A32 /* BLEAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		F686143022823E0500DF3A32 /* BluetoothTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				F68614622282427800DF3A32 /* Adapters */,
+				F686145F22823E5A00DF3A32 /* Utils */,
 				F686143122823E0500DF3A32 /* AppDelegate.swift */,
 				F686143322823E0500DF3A32 /* ViewController.swift */,
 				F686143522823E0500DF3A32 /* Main.storyboard */,
@@ -123,6 +129,22 @@
 				F686145322823E0900DF3A32 /* Info.plist */,
 			);
 			path = BluetoothTest1UITests;
+			sourceTree = "<group>";
+		};
+		F686145F22823E5A00DF3A32 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F686146022823E8000DF3A32 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F68614622282427800DF3A32 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				F68614632282429000DF3A32 /* BLEAdapter.swift */,
+			);
+			path = Adapters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +280,8 @@
 			files = (
 				F686143422823E0500DF3A32 /* ViewController.swift in Sources */,
 				F686143222823E0500DF3A32 /* AppDelegate.swift in Sources */,
+				F686146122823E8000DF3A32 /* Utils.swift in Sources */,
+				F68614642282429000DF3A32 /* BLEAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
