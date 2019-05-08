@@ -54,7 +54,7 @@
 		F68614632282429000DF3A32 /* BLEAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEAdapter.swift; sourceTree = "<group>"; };
 		F686146722824DE500DF3A32 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		F686146922824F9600DF3A32 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
-		F686146B228250C100DF3A32 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		F686146B228250C100DF3A32 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceListViewController.swift; path = BluetoothTest1/DeviceListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +82,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61FF234228395F1005A5BCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F686142522823E0500DF3A32 = {
 			isa = PBXGroup;
 			children = (
+				F61FF234228395F1005A5BCD /* Controller */,
+				F686146622824DC000DF3A32 /* Views */,
+				F686146522824DB400DF3A32 /* Models */,
+				F68614622282427800DF3A32 /* Adapters */,
+				F686145F22823E5A00DF3A32 /* Utils */,
+				F686143122823E0500DF3A32 /* AppDelegate.swift */,
+				F686146B228250C100DF3A32 /* DeviceListViewController.swift */,
 				F686143022823E0500DF3A32 /* BluetoothTest1 */,
 				F686144522823E0900DF3A32 /* BluetoothTest1Tests */,
 				F686145022823E0900DF3A32 /* BluetoothTest1UITests */,
@@ -105,12 +119,6 @@
 		F686143022823E0500DF3A32 /* BluetoothTest1 */ = {
 			isa = PBXGroup;
 			children = (
-				F686146622824DC000DF3A32 /* Views */,
-				F686146522824DB400DF3A32 /* Models */,
-				F68614622282427800DF3A32 /* Adapters */,
-				F686145F22823E5A00DF3A32 /* Utils */,
-				F686143122823E0500DF3A32 /* AppDelegate.swift */,
-				F686146B228250C100DF3A32 /* DeviceListViewController.swift */,
 				F686143522823E0500DF3A32 /* Main.storyboard */,
 				F686143822823E0900DF3A32 /* Assets.xcassets */,
 				F686143A22823E0900DF3A32 /* LaunchScreen.storyboard */,
@@ -142,7 +150,8 @@
 			children = (
 				F686146022823E8000DF3A32 /* Utils.swift */,
 			);
-			path = Utils;
+			name = Utils;
+			path = BluetoothTest1/Utils;
 			sourceTree = "<group>";
 		};
 		F68614622282427800DF3A32 /* Adapters */ = {
@@ -150,7 +159,8 @@
 			children = (
 				F68614632282429000DF3A32 /* BLEAdapter.swift */,
 			);
-			path = Adapters;
+			name = Adapters;
+			path = BluetoothTest1/Adapters;
 			sourceTree = "<group>";
 		};
 		F686146522824DB400DF3A32 /* Models */ = {
@@ -158,7 +168,8 @@
 			children = (
 				F686146722824DE500DF3A32 /* Device.swift */,
 			);
-			path = Models;
+			name = Models;
+			path = BluetoothTest1/Models;
 			sourceTree = "<group>";
 		};
 		F686146622824DC000DF3A32 /* Views */ = {
@@ -166,7 +177,8 @@
 			children = (
 				F686146922824F9600DF3A32 /* DeviceTableViewCell.swift */,
 			);
-			path = Views;
+			name = Views;
+			path = BluetoothTest1/Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,7 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.citsadigital.BluetoothTest1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -507,7 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.citsadigital.BluetoothTest1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

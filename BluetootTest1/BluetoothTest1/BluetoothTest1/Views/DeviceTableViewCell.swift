@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 class DeviceTableViewCell: UITableViewCell {
 
     @IBOutlet weak var deviceName: UILabel!
-    @IBOutlet weak var deviceAddress : UILabel!
+    @IBOutlet weak var deviceAddress: UILabel!
+    
+    
+    func update(name: String, address: String){
+            deviceName.text = name
+        deviceAddress.text = address
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

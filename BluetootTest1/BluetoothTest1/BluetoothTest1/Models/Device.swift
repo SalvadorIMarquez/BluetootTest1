@@ -14,6 +14,7 @@ class Device {
     var peripheral: CBPeripheral
     var deviceAddress : UUID
     var deviceName: String
+    
     //MARK: Initialization
     init (peripheral: CBPeripheral, deviceAddress : UUID, deviceName: String?){
         self.peripheral = peripheral

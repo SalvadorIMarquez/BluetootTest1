@@ -1,100 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KOr-x0-Sew">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9zn-fT-CEs">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bluetooth Device List-->
-        <scene sceneID="m37-fU-lfa">
+        <!--Bluetooth Device Controller-->
+        <scene sceneID="TsW-ly-rvL">
             <objects>
-                <tableViewController id="lJT-q6-2JZ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Es-nY-k3u">
+                <tableViewController id="Ovx-we-oDr" userLabel="Bluetooth Device Controller" customClass="DeviceListViewController" customModule="BluetoothTest1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tuU-Jh-Avz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeviceTableViewCell" rowHeight="75" id="Hwg-Ov-2O8">
-                                <rect key="frame" x="0.0" y="28" width="414" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeviceTableViewCell" rowHeight="130" id="kNo-cx-xli" customClass="DeviceTableViewCell" customModule="BluetoothTest1" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hwg-Ov-2O8" id="9ZY-au-Fd9" customClass="DeviceTableViewCell" customModule="BluetoothTest1" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="74.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kNo-cx-xli" id="b6l-Eu-yag">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="129.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0d-Kf-vpM" userLabel="Device Name">
-                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="IMV-hZ-FRk"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVR-be-92s">
+                                            <rect key="frame" x="20" y="11" width="374" height="47"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdi-0B-Luy" userLabel="Device Address">
-                                            <rect key="frame" x="20" y="37" width="374" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="uII-oY-ORa"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qda-a7-dme">
+                                            <rect key="frame" x="20" y="62" width="374" height="47"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="D0d-Kf-vpM" firstAttribute="top" secondItem="9ZY-au-Fd9" secondAttribute="topMargin" id="BjJ-vJ-gnj"/>
-                                        <constraint firstItem="Tdi-0B-Luy" firstAttribute="trailing" secondItem="9ZY-au-Fd9" secondAttribute="trailingMargin" id="QmH-yh-O73"/>
-                                        <constraint firstItem="Tdi-0B-Luy" firstAttribute="top" secondItem="D0d-Kf-vpM" secondAttribute="bottom" constant="5" id="bKg-zI-FfD"/>
-                                        <constraint firstItem="D0d-Kf-vpM" firstAttribute="trailing" secondItem="9ZY-au-Fd9" secondAttribute="trailingMargin" id="fRS-AG-9F1"/>
-                                        <constraint firstItem="D0d-Kf-vpM" firstAttribute="leading" secondItem="9ZY-au-Fd9" secondAttribute="leadingMargin" id="fzC-DI-OT1"/>
-                                        <constraint firstItem="Tdi-0B-Luy" firstAttribute="leading" secondItem="9ZY-au-Fd9" secondAttribute="leadingMargin" id="oCB-oj-RsG"/>
+                                        <constraint firstItem="kVR-be-92s" firstAttribute="trailing" secondItem="b6l-Eu-yag" secondAttribute="trailingMargin" id="1Uy-Ks-5kj"/>
+                                        <constraint firstItem="kVR-be-92s" firstAttribute="leading" secondItem="b6l-Eu-yag" secondAttribute="leadingMargin" id="8Rh-hc-WyA"/>
+                                        <constraint firstItem="qda-a7-dme" firstAttribute="leading" secondItem="b6l-Eu-yag" secondAttribute="leadingMargin" id="8pq-tX-lPC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="qda-a7-dme" secondAttribute="bottom" constant="10" id="Imj-5m-pqB"/>
+                                        <constraint firstItem="qda-a7-dme" firstAttribute="trailing" secondItem="b6l-Eu-yag" secondAttribute="trailingMargin" id="OcL-3T-2e1"/>
+                                        <constraint firstItem="kVR-be-92s" firstAttribute="top" secondItem="b6l-Eu-yag" secondAttribute="topMargin" id="Qyk-Rj-aie"/>
+                                        <constraint firstItem="qda-a7-dme" firstAttribute="height" secondItem="kVR-be-92s" secondAttribute="height" id="XRA-Po-pu4"/>
+                                        <constraint firstItem="qda-a7-dme" firstAttribute="top" secondItem="kVR-be-92s" secondAttribute="bottom" constant="4" id="jLD-QY-1ev"/>
                                     </constraints>
-                                    <connections>
-                                        <outlet property="deviceAddress" destination="Tdi-0B-Luy" id="IbK-km-aJQ"/>
-                                        <outlet property="deviceName" destination="D0d-Kf-vpM" id="U1K-mb-lRC"/>
-                                    </connections>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deviceAddress" destination="qda-a7-dme" id="wql-aO-w3E"/>
+                                    <outlet property="deviceName" destination="kVR-be-92s" id="Jzy-IR-Wtt"/>
+                                    <segue destination="LW3-YR-Kc7" kind="show" identifier="showDeviceControlSegue" id="xUE-tN-Ohb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="lJT-q6-2JZ" id="qrU-y8-ieF"/>
-                            <outlet property="delegate" destination="lJT-q6-2JZ" id="a3E-R6-tpm"/>
+                            <outlet property="dataSource" destination="Ovx-we-oDr" id="w6w-gE-QP0"/>
+                            <outlet property="delegate" destination="Ovx-we-oDr" id="KYJ-rC-9AE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bluetooth Device List" id="6RZ-hv-SeN">
-                        <barButtonItem key="leftBarButtonItem" title="Scan" style="plain" id="pGI-k6-Ot0">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gYE-9C-oYD">
+                    <navigationItem key="navigationItem" title="Bluetooth Device List" id="xaA-le-S6v">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="1Pw-xZ-CDd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HVk-sN-ydo">
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <action selector="onScan:" destination="Ovx-we-oDr" eventType="touchUpInside" id="Klx-tf-yk7"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ztu-0h-lLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpj-zf-RtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757.97101449275374" y="-232.36607142857142"/>
+            <point key="canvasLocation" x="860.86956521739137" y="-252.45535714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hdc-vC-HGo">
+            <objects>
+                <viewController id="LW3-YR-Kc7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aFY-Yj-i3I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jqW-F5-9QC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3e9-cQ-sVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="-251"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="CCu-Zg-zXZ">
+        <scene sceneID="QRD-nj-cQx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KOr-x0-Sew" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9zn-fT-CEs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6c3-VJ-eYP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1cF-qx-nj3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="lJT-q6-2JZ" kind="relationship" relationship="rootViewController" id="Nxf-cC-WuB"/>
+                        <segue destination="Ovx-we-oDr" kind="relationship" relationship="rootViewController" id="5Ra-Wb-Mi9"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HJH-ep-Rdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uq2-DX-Fnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-152.17391304347828" y="-232.36607142857142"/>
+            <point key="canvasLocation" x="-49.275362318840585" y="-252.45535714285714"/>
         </scene>
     </scenes>
 </document>
