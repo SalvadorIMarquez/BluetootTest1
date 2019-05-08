@@ -88,7 +88,7 @@ class DeviceListViewController: UITableViewController, ScanResultsConsumer {
             })
         }else {
             print("Setting up timer for when scanning is finished")
-            scan_timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(DeviceListViewController.scanningFinished(_:)), userInfo: nil, repeats: false)
+            scan_timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(DeviceListViewController.scanningFinished(_:)), userInfo: nil, repeats: false)
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61FF236228399EB005A5BCD /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61FF235228399EB005A5BCD /* DeviceViewController.swift */; };
 		F686143222823E0500DF3A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686143122823E0500DF3A32 /* AppDelegate.swift */; };
 		F686143722823E0500DF3A32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F686143522823E0500DF3A32 /* Main.storyboard */; };
 		F686143922823E0900DF3A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F686143822823E0900DF3A32 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61FF235228399EB005A5BCD /* DeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		F686142E22823E0500DF3A32 /* BluetoothTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F686143122823E0500DF3A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F686143622823E0500DF3A32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				F686145F22823E5A00DF3A32 /* Utils */,
 				F686143122823E0500DF3A32 /* AppDelegate.swift */,
 				F686146B228250C100DF3A32 /* DeviceListViewController.swift */,
+				F61FF235228399EB005A5BCD /* DeviceViewController.swift */,
 				F686143022823E0500DF3A32 /* BluetoothTest1 */,
 				F686144522823E0900DF3A32 /* BluetoothTest1Tests */,
 				F686145022823E0900DF3A32 /* BluetoothTest1UITests */,
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F686146A22824F9600DF3A32 /* DeviceTableViewCell.swift in Sources */,
+				F61FF236228399EB005A5BCD /* DeviceViewController.swift in Sources */,
 				F686143222823E0500DF3A32 /* AppDelegate.swift in Sources */,
 				F686146C228250C100DF3A32 /* DeviceListViewController.swift in Sources */,
 				F686146122823E8000DF3A32 /* Utils.swift in Sources */,
