@@ -56,7 +56,7 @@
 		F68614632282429000DF3A32 /* BLEAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEAdapter.swift; sourceTree = "<group>"; };
 		F686146722824DE500DF3A32 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		F686146922824F9600DF3A32 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
-		F686146B228250C100DF3A32 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceListViewController.swift; path = BluetoothTest1/DeviceListViewController.swift; sourceTree = "<group>"; };
+		F686146B228250C100DF3A32 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +87,8 @@
 		F61FF234228395F1005A5BCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F61FF235228399EB005A5BCD /* DeviceViewController.swift */,
+				F686146B228250C100DF3A32 /* DeviceListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,8 +102,6 @@
 				F68614622282427800DF3A32 /* Adapters */,
 				F686145F22823E5A00DF3A32 /* Utils */,
 				F686143122823E0500DF3A32 /* AppDelegate.swift */,
-				F686146B228250C100DF3A32 /* DeviceListViewController.swift */,
-				F61FF235228399EB005A5BCD /* DeviceViewController.swift */,
 				F686143022823E0500DF3A32 /* BluetoothTest1 */,
 				F686144522823E0900DF3A32 /* BluetoothTest1Tests */,
 				F686145022823E0900DF3A32 /* BluetoothTest1UITests */,

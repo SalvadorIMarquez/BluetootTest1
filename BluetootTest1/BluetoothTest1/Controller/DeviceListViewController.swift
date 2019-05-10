@@ -108,4 +108,19 @@ class DeviceListViewController: UITableViewController, ScanResultsConsumer {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Get the new view controller using segue.destinationViewController
+        //pass the selected object to the new view controller
+        if adapter.scanning == true {
+            print("stopping scanning")
+            adapter.stopScanning()
+            scan_timer.invalidate()
+        }
+        
+        if let index = tableView.indexPathForSelectedRow?.row{
+            let selected_device = devices[index] as! Device
+            adapter.selected_peripheral = selected_device.peripheral
+        }
+    }
+    
 }
