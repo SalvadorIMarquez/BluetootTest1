@@ -295,4 +295,21 @@ class BLEAdapter : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         
     }
     
+    func setAlertLevel(alert_level: String){
+        let new_alert_level = [alert_level]
+       /* let alert_level_byte = Data(bytes: new_alert_level)
+        selected_peripheral?.writeValue(alert_level_byte, for: ll_alert_level_characteristic!, type: .withoutResponse)
+        */
+        let prueba = alert_level.data(using: String.Encoding.utf8)
+        selected_peripheral?.writeValue(prueba!, for: ll_alert_level_characteristic!, type: .withoutResponse)
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?){
+        print("didWriteValueFor characteristic: service= \(characteristic.service.uuid.uuidString) characteristic= \(characteristic.uuid.uuidString) ")
+        if characteristic.service.uuid == CBUUID(string: LINK_LOSS_SERVICE_UUID) && characteristic.uuid == CBUUID(string: ALERT_LEVEL_CHARACTERISTIC){
+            bluetooth_operations_consumer?.onLlAlertLevelWritten()
+        }
+        
+    }
+    
 }

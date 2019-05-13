@@ -34,6 +34,8 @@ class DeviceViewController: UIViewController, BluetoothOperationsConsumer {
     var ll_alert_level: UInt8?
     let default_btn_colour = UIColor(red:247.0/255.0, green:247.0/255.0, blue: 247.0/255.0, alpha: 1.0)
     
+    var new_ll_alert_level: UInt8?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -80,15 +82,26 @@ class DeviceViewController: UIViewController, BluetoothOperationsConsumer {
     }
     
     @IBAction func onLow(_ sender: Any) {
-        print("onLow Jalanding")
+        let cadena1 = "LOW pressed \n"
+        adapter.setAlertLevel(alert_level: cadena1)
+        /*self.new_ll_alert_level = UInt8(48)
+        adapter.setAlertLevel(alert_level: new_ll_alert_level!)*/
     }
     
     @IBAction func onMedium(_ sender: Any) {
-        print("onMedium Jalanding")
+        //print("onMedium Jalanding")
+        let cadena2 = "MEDIUM pressed \n"
+        adapter.setAlertLevel(alert_level: cadena2)
+        /*self.new_ll_alert_level = UInt8(49)
+        adapter.setAlertLevel(alert_level: new_ll_alert_level!)*/
     }
     
     @IBAction func onHigh(_ sender: Any) {
         print("onHigh Jalanding")
+        let cadena3 = "HIGH pressed \n"
+        adapter.setAlertLevel(alert_level: cadena3)
+       /* self.new_ll_alert_level = UInt8(50)
+        adapter.setAlertLevel(alert_level: new_ll_alert_level!)*/
     }
     
     func onConnected() {            //funcion parte del protocolo BLuetoothOperationConsumer
@@ -204,7 +217,12 @@ class DeviceViewController: UIViewController, BluetoothOperationsConsumer {
             proximity_band = 1
         }
     }
+    func onLlAlertLevelWritten() {
+        print("onLlAlertLevelWritten \(new_ll_alert_level)")
+        ll_alert_level = new_ll_alert_level
+    }
 
+    
 
     /*
     // MARK: - Navigation
@@ -230,4 +248,5 @@ protocol BluetoothOperationsConsumer{
     func onHtTemperatureMeasurementDiscovered()
     func onDiscoveryFinished()
     func onLlAlertLevelRead(_ ll_alert_level: UInt8)
+    func onLlAlertLevelWritten()
 }
